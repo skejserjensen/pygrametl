@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>parallel &#8212; pygrametl 2.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <title>parallel &#8212; pygrametl 2.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=db3957a7" />
+    <script src="../_static/documentation_options.js?v=4348de45"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JDBCConnectionWrapper" href="jdbcconnectionwrapper.html" />
@@ -36,17 +32,17 @@
           <div class="body" role="main">
             
   <section id="module-pygrametl.parallel">
-<span id="parallel"></span><h1>parallel<a class="headerlink" href="#module-pygrametl.parallel" title="Permalink to this heading">¶</a></h1>
+<span id="parallel"></span><h1>parallel<a class="headerlink" href="#module-pygrametl.parallel" title="Link to this heading">¶</a></h1>
 <p>This module contains methods and classes for making parallel ETL flows.
 Note that this module in many cases will give better results with Jython
 (where it uses threads) than with CPython (where it uses processes).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.parallel.Decoupled">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">Decoupled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returnvalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consumes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directupdatepositions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batchsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queuesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autowrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.Decoupled" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">Decoupled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returnvalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consumes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directupdatepositions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batchsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queuesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autowrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.Decoupled" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.parallel.Decoupled.shutdowndecoupled">
-<span class="sig-name descname"><span class="pre">shutdowndecoupled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.Decoupled.shutdowndecoupled" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">shutdowndecoupled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.Decoupled.shutdowndecoupled" title="Link to this definition">¶</a></dt>
 <dd><p>Let the Decoupled instance finish its tasks and stop it.</p>
 <p>The Decoupled instance should not be used after this.</p>
 </dd></dl>
@@ -55,7 +51,7 @@ Note that this module in many cases will give better results with Jython
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.parallel.createflow">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">createflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">functions</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.createflow" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">createflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">functions</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.createflow" title="Link to this definition">¶</a></dt>
 <dd><p>Create a flow of functions running in different processes.</p>
 <p>A Flow object ready for use is returned.</p>
 <p>A flow consists of several functions running in several processes.
@@ -106,13 +102,13 @@ The default is 25.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.parallel.endsplits">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">endsplits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.endsplits" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">endsplits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.endsplits" title="Link to this definition">¶</a></dt>
 <dd><p>Wait for all splitpoints to finish</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.parallel.getsharedsequencefactory">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">getsharedsequencefactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startvalue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervallen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.getsharedsequencefactory" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">getsharedsequencefactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startvalue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervallen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.getsharedsequencefactory" title="Link to this definition">¶</a></dt>
 <dd><p>Creates a factory for parallel readers of a sequence.</p>
 <p>Returns a callable f. When f() is called, it returns a callable g.
 Whenever g(*args) is called, it returns a unique int from a sequence
@@ -133,7 +129,7 @@ Default: 5000.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.parallel.shareconnectionwrapper">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">shareconnectionwrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetconnection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxclients</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userfuncs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.shareconnectionwrapper" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">shareconnectionwrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetconnection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxclients</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userfuncs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.shareconnectionwrapper" title="Link to this definition">¶</a></dt>
 <dd><p>Share a ConnectionWrapper between several processes/threads.</p>
 <p>When Decoupled objects are used, they can try to update the DW at the same
 time. They can use several ConnectionWrappers to avoid race conditions, but
@@ -183,7 +179,7 @@ ConnectionWrapper. Default: ()</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.parallel.splitpoint">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">splitpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.splitpoint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.parallel.</span></span><span class="sig-name descname"><span class="pre">splitpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.parallel.splitpoint" title="Link to this definition">¶</a></dt>
 <dd><p>To be used as an annotation to make a function run in a separate process.</p>
 <p>Each call of a &#64;splitpoint annotated function f involves adding the
 request (and arguments, if any) to a shared queue. This can be
@@ -310,11 +306,11 @@ queue. 0 means unlimited. Default: 0</p></li>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009 - 2022, Aalborg University.
+      &copy;2009 - 2023, Aalborg University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="../_sources/api/parallel.rst.txt"

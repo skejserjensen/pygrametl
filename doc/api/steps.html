@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>steps &#8212; pygrametl 2.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <title>steps &#8212; pygrametl 2.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=db3957a7" />
+    <script src="../_static/documentation_options.js?v=4348de45"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="FIFODict" href="fifodict.html" />
@@ -36,13 +32,13 @@
           <div class="body" role="main">
             
   <section id="module-pygrametl.steps">
-<span id="steps"></span><h1>steps<a class="headerlink" href="#module-pygrametl.steps" title="Permalink to this heading">¶</a></h1>
+<span id="steps"></span><h1>steps<a class="headerlink" href="#module-pygrametl.steps" title="Link to this heading">¶</a></h1>
 <p>This module contains classes for making “steps” in an ETL flow.
 Steps can be connected such that a row flows from step to step and
 each step does something with the row.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.ConditionalStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">ConditionalStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whentrue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whenfalse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ConditionalStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">ConditionalStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whentrue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whenfalse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ConditionalStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that redirects rows based on a condition.</p>
 <p><strong>Arguments:</strong></p>
@@ -64,7 +60,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.ConditionalStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ConditionalStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ConditionalStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -73,7 +69,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.CopyStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">CopyStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">originaldest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copydest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deepcopy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.CopyStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">CopyStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">originaldest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copydest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deepcopy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.CopyStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that copies each row and passes on the copy and the original</p>
 <p><strong>Arguments:</strong></p>
@@ -96,7 +92,7 @@ Default: False</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.CopyStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.CopyStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.CopyStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -105,7 +101,7 @@ Default: False</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.DimensionStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">DimensionStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.DimensionStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">DimensionStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.DimensionStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that performs ensure(row) on a given dimension for each row.</p>
 <p><strong>Arguments:</strong></p>
@@ -125,7 +121,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.DimensionStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.DimensionStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.DimensionStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -134,7 +130,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.GarbageStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">GarbageStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.GarbageStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">GarbageStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.GarbageStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that does nothing. Rows are neither modified nor passed on.</p>
 <p><strong>Arguments:</strong></p>
@@ -146,7 +142,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.GarbageStep.process">
-<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.GarbageStep.process" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.GarbageStep.process" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>If the row is not explicitly redirected (see _redirect), it will
 be passed on the the next step if this has been set.</p>
@@ -156,7 +152,7 @@ be passed on the the next step if this has been set.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.MappingStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">MappingStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiretargets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.MappingStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">MappingStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requiretargets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.MappingStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that applies functions to attributes in rows.</p>
 <p><strong>Arguments:</strong></p>
@@ -180,7 +176,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.MappingStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.MappingStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.MappingStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -189,7 +185,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.PrintStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">PrintStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.PrintStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">PrintStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.PrintStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that prints each given row.</p>
 <p><strong>Arguments:</strong></p>
@@ -206,7 +202,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.PrintStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.PrintStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.PrintStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -215,7 +211,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.RenamingFromToStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingFromToStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renaming</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingFromToStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingFromToStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renaming</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingFromToStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>Step that performs renamings of attributes in rows.</p>
 <p><strong>Arguments:</strong></p>
@@ -238,7 +234,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.RenamingFromToStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingFromToStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingFromToStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -247,13 +243,13 @@ created the latest. Default: None</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pygrametl.steps.RenamingStep">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingStep</span></span><a class="headerlink" href="#pygrametl.steps.RenamingStep" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingStep</span></span><a class="headerlink" href="#pygrametl.steps.RenamingStep" title="Link to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pygrametl.steps.RenamingFromToStep" title="pygrametl.steps.RenamingFromToStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">RenamingFromToStep</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.RenamingToFromStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingToFromStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renaming</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingToFromStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">RenamingToFromStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renaming</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingToFromStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.RenamingFromToStep" title="pygrametl.steps.RenamingFromToStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">RenamingFromToStep</span></code></a></p>
 <p><strong>Arguments:</strong></p>
 <ul class="simple">
@@ -275,7 +271,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.RenamingToFromStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingToFromStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.RenamingToFromStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -284,7 +280,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.SCDimensionStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">SCDimensionStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SCDimensionStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">SCDimensionStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SCDimensionStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that performs scdensure(row) on a given dimension for each row.</p>
 <p><strong>Arguments:</strong></p>
@@ -304,7 +300,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.SCDimensionStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SCDimensionStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SCDimensionStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -313,7 +309,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.SourceStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">SourceStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SourceStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">SourceStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SourceStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that iterates over a data source and gives each row to the
 next step. The start method must be called.</p>
@@ -332,7 +328,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.SourceStep.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SourceStep.start" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.SourceStep.start" title="Link to this definition">¶</a></dt>
 <dd><p>Start the iteration of the source’s rows and pass them on.</p>
 </dd></dl>
 
@@ -340,7 +336,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.Step">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">Step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">worker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">Step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">worker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The basic class for steps in an ETL flow.</p>
 <p><strong>Arguments:</strong></p>
@@ -359,26 +355,26 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.Step.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.Step.getstep">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">getstep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.getstep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">getstep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.getstep" title="Link to this definition">¶</a></dt>
 <dd><p>Return the Step instance with the given name</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.Step.name">
-<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.name" title="Link to this definition">¶</a></dt>
 <dd><p>Return the name of the Step instance</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.Step.process">
-<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.process" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.Step.process" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>If the row is not explicitly redirected (see _redirect), it will
 be passed on the the next step if this has been set.</p>
@@ -388,7 +384,7 @@ be passed on the the next step if this has been set.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.steps.ValueMappingStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">ValueMappingStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputatt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputatt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requireinput</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultvalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ValueMappingStep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">ValueMappingStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputatt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputatt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requireinput</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultvalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ValueMappingStep" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pygrametl.steps.Step" title="pygrametl.steps.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a></p>
 <p>A Step that Maps values to other values (e.g., DK -&gt; Denmark)</p>
 <p><strong>Arguments:</strong></p>
@@ -414,7 +410,7 @@ created the latest. Default: None</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.steps.ValueMappingStep.defaultworker">
-<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ValueMappingStep.defaultworker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">defaultworker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.ValueMappingStep.defaultworker" title="Link to this definition">¶</a></dt>
 <dd><p>Perform the Step’s operation on the given row.</p>
 <p>Inheriting classes should implement this method.</p>
 </dd></dl>
@@ -423,7 +419,7 @@ created the latest. Default: None</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.steps.connectsteps">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">connectsteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.connectsteps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.steps.</span></span><span class="sig-name descname"><span class="pre">connectsteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.steps.connectsteps" title="Link to this definition">¶</a></dt>
 <dd><p>Set a.next = b, b.next = c, etc. when given the steps a, b, c, …</p>
 </dd></dl>
 
@@ -505,11 +501,11 @@ created the latest. Default: None</p></li>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009 - 2022, Aalborg University.
+      &copy;2009 - 2023, Aalborg University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="../_sources/api/steps.rst.txt"

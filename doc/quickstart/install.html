@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Install Guide &#8212; pygrametl 2.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <title>Install Guide &#8212; pygrametl 2.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=db3957a7" />
+    <script src="../_static/documentation_options.js?v=4348de45"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Beginner Guide" href="beginner.html" />
@@ -36,14 +32,14 @@
           <div class="body" role="main">
             
   <section id="install-guide">
-<span id="install"></span><h1>Install Guide<a class="headerlink" href="#install-guide" title="Permalink to this heading">¶</a></h1>
+<span id="install"></span><h1>Install Guide<a class="headerlink" href="#install-guide" title="Link to this heading">¶</a></h1>
 <p>Installing pygrametl is fairly simple, mainly due to the package having no
 mandatory dependencies. This guide contains all the information needed to
 install and use the package with CPython. pygrametl also supports the JVM-based
 Python implementation Jython. For more information about using pygrametl with
 Jython see <a class="reference internal" href="../examples/jython.html#jython"><span class="std std-ref">Jython</span></a>.</p>
 <section id="installing-a-python-implementation">
-<h2>Installing a Python Implementation<a class="headerlink" href="#installing-a-python-implementation" title="Permalink to this heading">¶</a></h2>
+<h2>Installing a Python Implementation<a class="headerlink" href="#installing-a-python-implementation" title="Link to this heading">¶</a></h2>
 <p>pygrametl requires an implementation of the Python programming language to run.
 Currently, pygrametl officially supports the following implementations (other
 implementations like <a class="reference external" href="https://www.pypy.org/">PyPy</a> and <a class="reference external" href="https://ironpython.net/">IronPython</a> might also work):</p>
@@ -70,7 +66,7 @@ mode, allowing commands to be executed directly on the command line.</p>
 </div>
 </section>
 <section id="installing-pygrametl">
-<h2>Installing pygrametl<a class="headerlink" href="#installing-pygrametl" title="Permalink to this heading">¶</a></h2>
+<h2>Installing pygrametl<a class="headerlink" href="#installing-pygrametl" title="Link to this heading">¶</a></h2>
 <p>pygrametl can either be installed from <a class="reference external" href="https://pypi.python.org/pypi/pygrametl/">PyPI</a> using a package manager, such as
 <a class="reference external" href="https://pip.pypa.io/">pip</a> or <a class="reference external" href="http://conda.pydata.org/">conda</a>, or by
 manually checking out the latest development version from the official <a class="reference external" href="https://github.com/chrthomsen/pygrametl">GitHub
@@ -80,7 +76,7 @@ simplest way to install pygrametl as the process is automated by the package
 manager. Bug fixes and new experimental features are, however, of course,
 available first in the <a class="reference external" href="https://github.com/chrthomsen/pygrametl">GitHub repository</a>.</p>
 <section id="install-from-pypi-with-pip">
-<h3>Install from PyPI with pip<a class="headerlink" href="#install-from-pypi-with-pip" title="Permalink to this heading">¶</a></h3>
+<h3>Install from PyPI with pip<a class="headerlink" href="#install-from-pypi-with-pip" title="Link to this heading">¶</a></h3>
 <p>pip can install pygrametl to the Python implementation’s global package
 directory, or to the user’s local package directory which is usually located in
 the user’s home directory. Installing pygrametl globally will often require root
@@ -98,7 +94,7 @@ $ pip install pygrametl --user
 </div>
 </section>
 <section id="install-from-pypi-with-conda">
-<h3>Install from PyPI with conda<a class="headerlink" href="#install-from-pypi-with-conda" title="Permalink to this heading">¶</a></h3>
+<h3>Install from PyPI with conda<a class="headerlink" href="#install-from-pypi-with-conda" title="Link to this heading">¶</a></h3>
 <p>conda is an alternative package manager for Python. It is bundled with the
 <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> CPython distribution
 from <a class="reference external" href="https://www.anaconda.com/">Anaconda, Inc</a>. There is no official
@@ -119,7 +115,7 @@ $ conda install --use-local pygrametl
 only used for building the package.</p>
 </section>
 <section id="install-from-github">
-<h3>Install from GitHub<a class="headerlink" href="#install-from-github" title="Permalink to this heading">¶</a></h3>
+<h3>Install from GitHub<a class="headerlink" href="#install-from-github" title="Link to this heading">¶</a></h3>
 <p>The latest development version of pygrametl can be downloaded from the official
 <a class="reference external" href="https://github.com/chrthomsen/pygrametl">GitHub repository</a>. The project
 currently uses Git for version control, so the repository can be cloned using
@@ -137,7 +133,7 @@ locate modules can be found in the two links provided.</p>
 </section>
 </section>
 <section id="verifying-installation">
-<h2>Verifying Installation<a class="headerlink" href="#verifying-installation" title="Permalink to this heading">¶</a></h2>
+<h2>Verifying Installation<a class="headerlink" href="#verifying-installation" title="Link to this heading">¶</a></h2>
 <p>A simple way to verify that pygrametl has been installed correctly and is
 accessible to the Python interpreter is to start the interpreter in
 interactive mode from the command line and run the command <code class="docutils literal notranslate"><span class="pre">import</span>
@@ -246,11 +242,11 @@ of pygrametl to <code class="xref py py-attr docutils literal notranslate"><span
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009 - 2022, Aalborg University.
+      &copy;2009 - 2023, Aalborg University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="../_sources/quickstart/install.rst.txt"

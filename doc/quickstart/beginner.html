@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Beginner Guide &#8212; pygrametl 2.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <title>Beginner Guide &#8212; pygrametl 2.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=db3957a7" />
+    <script src="../_static/documentation_options.js?v=4348de45"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Database" href="../examples/database.html" />
@@ -36,25 +32,24 @@
           <div class="body" role="main">
             
   <section id="beginner-guide">
-<span id="beginner"></span><h1>Beginner Guide<a class="headerlink" href="#beginner-guide" title="Permalink to this heading">¶</a></h1>
+<span id="beginner"></span><h1>Beginner Guide<a class="headerlink" href="#beginner-guide" title="Link to this heading">¶</a></h1>
 <p>The following is a small guide for users new to pygrametl. It shows the main
-constructs provided by pygrametl and how to use them to create a simple ETL
-flow for a made-up example. The example is a toy data warehouse for a chain of
+constructs provided by pygrametl and how to use them to create a simple ETL flow
+for a simple made-up example. The example is a toy data warehouse for a chain of
 book stores and is shown below as <a class="reference internal" href="#dwexample"><span class="std std-ref">Data Warehouse example</span></a>. The warehouse has one fact
 table and three dimensions organized in a star schema. The fact table stores
 facts about how many of each book is sold each day. The book dimension stores
-the name and genre of each book sold, the location dimension stores the city
-and region of the stores, and the time dimension stores the date of each sale.
-To keep the example simple, none of the dimensions are snowflaked, nor do they
-contain any slowly changing attributes. These are however supported by
-pygrametl through <a class="reference internal" href="../api/tables.html#pygrametl.tables.SnowflakedDimension" title="pygrametl.tables.SnowflakedDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">SnowflakedDimension</span></code></a>,
-<a class="reference internal" href="../api/tables.html#pygrametl.tables.TypeOneSlowlyChangingDimension" title="pygrametl.tables.TypeOneSlowlyChangingDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeOneSlowlyChangingDimension</span></code></a>, and
-<a class="reference internal" href="../api/tables.html#pygrametl.tables.SlowlyChangingDimension" title="pygrametl.tables.SlowlyChangingDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">SlowlyChangingDimension</span></code></a>, respectively. In addition, pygrametl
+the name and genre of each book sold, the location dimension stores the city and
+region of the stores, and the time dimension stores the date of each sale. To
+keep the example simple, none of the dimensions are snowflaked, nor do they
+contain any slowly changing attributes. These are however supported by pygrametl
+through <a class="reference internal" href="../api/tables.html#pygrametl.tables.SnowflakedDimension" title="pygrametl.tables.SnowflakedDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">SnowflakedDimension</span></code></a>, <a class="reference internal" href="../api/tables.html#pygrametl.tables.TypeOneSlowlyChangingDimension" title="pygrametl.tables.TypeOneSlowlyChangingDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeOneSlowlyChangingDimension</span></code></a>,
+and <a class="reference internal" href="../api/tables.html#pygrametl.tables.SlowlyChangingDimension" title="pygrametl.tables.SlowlyChangingDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">SlowlyChangingDimension</span></code></a>, respectively. In addition, pygrametl
 provides high-level constructs for creating efficient multiprocess or
 multithreaded ETL flow, depending on the implementation of Python used (see
 <a class="reference internal" href="../examples/parallel.html#parallel"><span class="std std-ref">Parallel</span></a>). pygrametl also simplifies testing by making it easy to define
-preconditions and postconditions for each part of an ETL flow without relying
-on external files for the input and the expected results (see <a class="reference internal" href="../examples/testing.html#testing"><span class="std std-ref">Drawn Table Testing</span></a>).</p>
+preconditions and postconditions for each part of an ETL flow without relying on
+external files for the input and the expected results (see <a class="reference internal" href="../examples/testing.html#testing"><span class="std std-ref">Drawn Table Testing</span></a>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When using pygrametl, we strongly recommend using named parameters when
@@ -63,11 +58,11 @@ the future if the API changes.</p>
 </div>
 <figure class="align-center" id="id1">
 <span id="dwexample"></span><img alt="bookstore data warehouse example" src="../_images/example.svg" /><figcaption>
-<p><span class="caption-text">Data Warehouse example</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Data Warehouse example</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="input-data">
-<h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this heading">¶</a></h2>
+<h2>Input Data<a class="headerlink" href="#input-data" title="Link to this heading">¶</a></h2>
 <p>Most pygrametl abstractions either produce, consume, or operate on data in
 rows. A row is a Python <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> where the names of the row’s columns are
 the keys and the values are the data the row contains. For more information
@@ -105,7 +100,7 @@ Odense,     Region of Southern Denmark
 </div>
 </section>
 <section id="etl-flow">
-<h2>ETL Flow<a class="headerlink" href="#etl-flow" title="Permalink to this heading">¶</a></h2>
+<h2>ETL Flow<a class="headerlink" href="#etl-flow" title="Link to this heading">¶</a></h2>
 <p>The ETL flow is designed to run on CPython and use PostgreSQL as the RDBMS for
 the data warehouse. The guide assumes PostgreSQL is already installed and
 running. The ETL flow can easily be run on other Python implementations like
@@ -115,8 +110,8 @@ equivalents and <a class="reference internal" href="../api/pygrametl.html#pygram
 <a class="reference internal" href="../api/jdbcconnectionwrapper.html#pygrametl.JDBCConnectionWrapper.JDBCConnectionWrapper" title="pygrametl.JDBCConnectionWrapper.JDBCConnectionWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">JDBCConnectionWrapper</span></code></a>. For more information about running pygrametl
 on Jython see <a class="reference internal" href="../examples/jython.html#jython"><span class="std std-ref">Jython</span></a>.</p>
 <p>We start by creating the database and tables for the data warehouse in
-PostgreSQL using psql. The SQL script example.sql creates the dw database, the
-dwuser role with all privileges, and the four tables:</p>
+PostgreSQL using <code class="xref py py-attr docutils literal notranslate"><span class="pre">psql</span></code>. The SQL script example.sql creates the <code class="xref py py-attr docutils literal notranslate"><span class="pre">dw</span></code>
+database, the <code class="xref py py-attr docutils literal notranslate"><span class="pre">dwuser</span></code> role with all privileges, and the four tables:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">f</span> <span class="n">example</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
@@ -240,7 +235,7 @@ information about the more advanced dimension and fact table classes, see
 <span class="c1"># fact table. It is created with the name of the table, a list of columns</span>
 <span class="c1"># constituting the primary key of the fact table, and a list of measures</span>
 <span class="n">fact_table</span> <span class="o">=</span> <span class="n">FactTable</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;facttable&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span>
         <span class="n">keyrefs</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bookid&#39;</span><span class="p">,</span> <span class="s1">&#39;locationid&#39;</span><span class="p">,</span> <span class="s1">&#39;timeid&#39;</span><span class="p">],</span>
         <span class="n">measures</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sale&#39;</span><span class="p">])</span>
 </pre></div>
@@ -254,7 +249,7 @@ restrictions. This also means that Python’s many packages can be used as part
 of an ETL flow.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># A normal Python function is used to split the date into its parts</span>
 <span class="k">def</span> <span class="nf">split_date</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Splits a date represented by a datetime into its three parts&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Splits a date represented by a datetime into its three parts&quot;&quot;&quot;</span>
 
     <span class="c1"># First the datetime object is extracted from the row dictionary</span>
     <span class="n">date</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span>
@@ -266,14 +261,26 @@ of an ETL flow.</p>
     <span class="n">row</span><span class="p">[</span><span class="s1">&#39;day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">day</span>
 </pre></div>
 </div>
-<p>Finally, the data can be inserted into the data warehouse. All rows from the
-CSV file are inserted into the location dimension first. This is necessary for
-foreign keys to the location dimension to be computed while filling the fact
-table. The other two dimensions are filled while inserting the facts as the
-data needed is included in the sales records. To ensure that the data is
-committed to the database and that the connection is closed correctly, the
-methods <a class="reference internal" href="../api/pygrametl.html#pygrametl.ConnectionWrapper.commit" title="pygrametl.ConnectionWrapper.commit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConnectionWrapper.commit()</span></code></a> and <a class="reference internal" href="../api/pygrametl.html#pygrametl.ConnectionWrapper.close" title="pygrametl.ConnectionWrapper.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConnectionWrapper.close()</span></code></a>
-are executed at the end.</p>
+<p>Finally, the data can be inserted into the data warehouse. With a few
+exceptions, the dimension classes in pygrametl provide the same interface,
+likewise for the fact table classes. When adding members to dimensions or facts
+to fact tables in pygrametl, the methods <code class="xref py py-meth docutils literal notranslate"><span class="pre">lookup()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">insert()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">ensure()</span></code> are generally used. <code class="xref py py-meth docutils literal notranslate"><span class="pre">lookup()</span></code> returns the key for the member
+or the key and measure values for the fact that matches a given row if it
+exists, <code class="xref py py-meth docutils literal notranslate"><span class="pre">insert()</span></code> adds a member to a dimension or a fact to a fact table,
+and <code class="xref py py-meth docutils literal notranslate"><span class="pre">ensure()</span></code> performs a <code class="xref py py-meth docutils literal notranslate"><span class="pre">lookup()</span></code> followed by an <code class="xref py py-meth docutils literal notranslate"><span class="pre">insert()</span></code> if
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">lookup()</span></code> did not find an existing member or fact. Another commonly used
+method is <code class="xref py py-meth docutils literal notranslate"><span class="pre">scdensure()</span></code>. It is implemented on dimension classes that support
+slowly changing dimensions and operates like <code class="xref py py-meth docutils literal notranslate"><span class="pre">ensure()</span></code> but takes versioning
+into account. For the full API of pygrametl’s dimension and fact table classes,
+see <a class="reference internal" href="../api/tables.html#module-pygrametl.tables" title="pygrametl.tables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tables</span></code></a></p>
+<p>All rows from the CSV file are inserted into the location dimension first. This
+is necessary for foreign keys to the location dimension to be computed while
+filling the fact table. The other two dimensions are filled while inserting the
+facts as the data needed is included in the sales records. To ensure that the
+data is committed to the database and that the connection is closed correctly,
+the methods <a class="reference internal" href="../api/pygrametl.html#pygrametl.ConnectionWrapper.commit" title="pygrametl.ConnectionWrapper.commit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConnectionWrapper.commit()</span></code></a> and
+<a class="reference internal" href="../api/pygrametl.html#pygrametl.ConnectionWrapper.close" title="pygrametl.ConnectionWrapper.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ConnectionWrapper.close()</span></code></a> are executed at the end.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The Location dimension is filled with data from the CSV file as the file</span>
 <span class="c1"># contains all the information required for both columns in the table. If</span>
 <span class="c1"># the dimension was filled using data from the sales database, it would be</span>
@@ -380,13 +387,13 @@ automated repeatable tests (see <a class="reference internal" href="../examples/
         <span class="n">lookupatts</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">])</span>
 
 <span class="n">fact_table</span> <span class="o">=</span> <span class="n">FactTable</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;facttable&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sale&#39;</span><span class="p">,</span>
         <span class="n">keyrefs</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bookid&#39;</span><span class="p">,</span> <span class="s1">&#39;locationid&#39;</span><span class="p">,</span> <span class="s1">&#39;timeid&#39;</span><span class="p">],</span>
         <span class="n">measures</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sale&#39;</span><span class="p">])</span>
 
 <span class="c1"># Python function needed to split the date into its three parts</span>
 <span class="k">def</span> <span class="nf">split_date</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Splits a date represented by a datetime into its three parts&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Splits a date represented by a datetime into its three parts&quot;&quot;&quot;</span>
 
     <span class="c1"># Splitting of the date into parts</span>
     <span class="n">date</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span>
@@ -506,11 +513,11 @@ automated repeatable tests (see <a class="reference internal" href="../examples/
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009 - 2022, Aalborg University.
+      &copy;2009 - 2023, Aalborg University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="../_sources/quickstart/beginner.rst.txt"

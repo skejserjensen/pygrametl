@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>drawntabletesting &#8212; pygrametl 2.7 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <title>drawntabletesting &#8212; pygrametl 2.8 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=db3957a7" />
+    <script src="../_static/documentation_options.js?v=4348de45"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="FIFODict" href="fifodict.html" />
@@ -35,13 +31,13 @@
           <div class="body" role="main">
             
   <section id="module-pygrametl.drawntabletesting">
-<span id="drawntabletesting"></span><h1>drawntabletesting<a class="headerlink" href="#module-pygrametl.drawntabletesting" title="Permalink to this heading">¶</a></h1>
+<span id="drawntabletesting"></span><h1>drawntabletesting<a class="headerlink" href="#module-pygrametl.drawntabletesting" title="Link to this heading">¶</a></h1>
 <p>This module contains classes and functions for defining preconditions and
 postconditions for database state. The conditions can be used in unit tests
 to efficiently evaluate the expected database state.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.drawntabletesting.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nullsubst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NULL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableprefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loadFrom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testconnection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygrametl.drawntabletesting.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nullsubst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NULL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variableprefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loadFrom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testconnection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class representing a concrete database table.</p>
 <p>Note that the asserts assume that the Table instance and the database
@@ -59,7 +55,7 @@ If None pygrametl’s current default connection wrapper is used.</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.additions">
-<span class="sig-name descname"><span class="pre">additions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">withKey</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.additions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">additions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">withKey</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.additions" title="Link to this definition">¶</a></dt>
 <dd><p>Return all rows added or updated since the original drawn table.</p>
 <p><strong>Arguments:</strong></p>
 <ul class="simple">
@@ -69,7 +65,7 @@ If None pygrametl’s current default connection wrapper is used.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.assertDisjoint">
-<span class="sig-name descname"><span class="pre">assertDisjoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertDisjoint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">assertDisjoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertDisjoint" title="Link to this definition">¶</a></dt>
 <dd><p>Return a Boolean indicating if none of the rows in this object occur
 in the database table. If verbose=True an AssertionError is also
 raised if the row sets are not disjoint.</p>
@@ -82,7 +78,7 @@ assertion is printed as part of the AssertionError.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.assertEqual">
-<span class="sig-name descname"><span class="pre">assertEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertEqual" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">assertEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertEqual" title="Link to this definition">¶</a></dt>
 <dd><p>Return a Boolean indicating if the rows in this object and the rows
 in the database table match. If verbose=True an AssertionError is
 also raised if the rows don’t match.</p>
@@ -95,7 +91,7 @@ assertion is printed as part of the AssertionError.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.assertSubset">
-<span class="sig-name descname"><span class="pre">assertSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertSubset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">assertSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.assertSubset" title="Link to this definition">¶</a></dt>
 <dd><p>Return a Boolean stating if the rows in this object are a subset of
 those in the database table. If verbose=True an AssertionError is
 also raised if the rows are not a subset of those in the database
@@ -109,25 +105,25 @@ assertion is printed as part of the AssertionError.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.clear">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.clear" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.clear" title="Link to this definition">¶</a></dt>
 <dd><p>Drop all tables and variables without checking their contents.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.create">
-<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.create" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.create" title="Link to this definition">¶</a></dt>
 <dd><p>Create the table if it does not exist without adding any rows.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.drop">
-<span class="sig-name descname"><span class="pre">drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.drop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.drop" title="Link to this definition">¶</a></dt>
 <dd><p>Drop the table in the database without checking the contents.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.ensure">
-<span class="sig-name descname"><span class="pre">ensure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.ensure" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ensure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.ensure" title="Link to this definition">¶</a></dt>
 <dd><p>Create the table if it does not exist, otherwise verify the rows.</p>
 <p>If the table does exist but does not contain the expected set of
 rows an exception is raised to prevent overriding existing data.</p>
@@ -135,19 +131,19 @@ rows an exception is raised to prevent overriding existing data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.getSQLToCreate">
-<span class="sig-name descname"><span class="pre">getSQLToCreate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.getSQLToCreate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getSQLToCreate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.getSQLToCreate" title="Link to this definition">¶</a></dt>
 <dd><p>Return a string of SQL that creates the table.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.getSQLToInsert">
-<span class="sig-name descname"><span class="pre">getSQLToInsert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.getSQLToInsert" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">getSQLToInsert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.getSQLToInsert" title="Link to this definition">¶</a></dt>
 <dd><p>Return a string of SQL that inserts all rows into the table.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.key">
-<span class="sig-name descname"><span class="pre">key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.key" title="Link to this definition">¶</a></dt>
 <dd><p>Return the primary key.</p>
 <p>For a simple primary key, the name is returned. For a composite
 primary key, all names are returned in a tuple.</p>
@@ -155,13 +151,13 @@ primary key, all names are returned in a tuple.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.reset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.reset" title="Link to this definition">¶</a></dt>
 <dd><p>Forcefully create a new table and add the provided rows.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.Table.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.update" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.Table.update" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new instance with the row specified by the index
 updated with the values included in the provided line.</p>
 <p><strong>Arguments:</strong></p>
@@ -175,7 +171,7 @@ updated with the values included in the provided line.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygrametl.drawntabletesting.connectionwrapper">
-<span class="sig-prename descclassname"><span class="pre">pygrametl.drawntabletesting.</span></span><span class="sig-name descname"><span class="pre">connectionwrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.connectionwrapper" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygrametl.drawntabletesting.</span></span><span class="sig-name descname"><span class="pre">connectionwrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygrametl.drawntabletesting.connectionwrapper" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new connection wrapper for use with unit tests.</p>
 <p><strong>Arguments:</strong></p>
 <ul class="simple">
@@ -261,11 +257,11 @@ a connection to a temporary SQLite in-memory database is created.</p></li>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009 - 2022, Aalborg University.
+      &copy;2009 - 2023, Aalborg University.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="../_sources/api/drawntabletesting.rst.txt"
