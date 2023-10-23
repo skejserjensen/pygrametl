@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="541.12323mm"
+   width="527.10126mm"
    height="259.72797mm"
-   viewBox="0 0 541.12324 259.728"
+   viewBox="0 0 527.10127 259.728"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="etl-with-pygrametl.svg"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.86015768"
-     inkscape:cx="1390.4427"
-     inkscape:cy="541.17985"
+     inkscape:zoom="0.58744903"
+     inkscape:cx="1006.8959"
+     inkscape:cy="405.14153"
      inkscape:window-width="1918"
      inkscape:window-height="1176"
      inkscape:window-x="0"
@@ -38,14 +38,17 @@
    y="87.990463"
    width="40.291069"
    height="18.705362"
-   id="rect16011" />
-	
-	
-</defs><g
+   id="rect16011" />&#10;	&#10;	&#10;</defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(358.36185,184.18655)"><text
+     transform="translate(358.36185,184.18655)"><rect
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#ffffff;stroke-width:0.999993;stroke-opacity:1"
+       id="rect1"
+       width="526"
+       height="258.57901"
+       x="-357.86179"
+       y="-183.68655" /><text
        xml:space="preserve"
        style="font-size:9.09715px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';fill:#ffffff;stroke:#000000;stroke-width:0.264998"
        x="-323.00409"
@@ -103,7 +106,7 @@
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.09716px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264999"
          x="-314.97665"
-         y="-95.299858"
+         y="-95.299866"
          id="tspan961">Text File(s)</tspan></text><text
        xml:space="preserve"
        style="font-size:9.92414px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';text-align:start;text-anchor:start;fill:#ffffff;stroke:#000000;stroke-width:0.264999"
@@ -346,17 +349,14 @@
        style="stroke-width:3.348;stroke-dasharray:none" /><g
        id="g15487"
        transform="matrix(0,1.4524326,-1.4362882,0,-34.989064,-65.366897)"
-       style="stroke-width:0.183186">
-	<polygon
-   points="11,20 15,20 15,5 18,5 12.9,0 8,5 11,5 "
+       style="stroke-width:0.183186">&#10;	<polygon
+   points="15,5 18,5 12.9,0 8,5 11,5 11,20 15,20 "
    id="polygon15483"
-   style="stroke-width:0.183186" />
-	<polygon
-   points="6,0 2,0 2,15 -1,15 3.9,20 9,15 6,15 "
+   style="stroke-width:0.183186" />&#10;	<polygon
+   points="2,15 -1,15 3.9,20 9,15 6,15 6,0 2,0 "
    id="polygon15485"
-   style="stroke-width:0.183186" />
-</g><polygon
-       points="15,20 15,5 18,5 12.9,0 8,5 11,5 11,20 "
+   style="stroke-width:0.183186" />&#10;</g><polygon
+       points="18,5 12.9,0 8,5 11,5 11,20 15,20 15,5 "
        id="polygon15483-8"
        style="stroke-width:0.183186"
        transform="matrix(0,1.4524326,-1.4362882,0,-248.61359,-71.992782)" /><text
